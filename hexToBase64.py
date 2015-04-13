@@ -9,9 +9,10 @@ result = "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t"
 # in python 2, replace binascii with s.decode('hex')
 
 def hexToBase64(s): 
-    return base64.b64encode(binascii.unhexlify(s))
+    return base64.b64encode(binascii.unhexlify(s)).decode('ascii')
 
 
 if __name__=='__main__':
     
     print(hexToBase64(s))
+    assert(hexToBase64(s) == result)
