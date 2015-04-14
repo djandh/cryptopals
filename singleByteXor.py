@@ -1,5 +1,4 @@
 
-from fixedXor import *
 from Crypto.Util.strxor import strxor_c 
 from binascii import *
 
@@ -45,7 +44,7 @@ def letterScore(s):
     return score
 
 
-def singleByteXor(ciph):
+def breakSingleByteXor(ciph):
 
     score, key = 0, 0
     decoded= ""
@@ -56,12 +55,12 @@ def singleByteXor(ciph):
             score = tmpScore
             key = k
             decoded= msg
-    return [decoded, key]
+    return [decoded, key, score]
 
 
 if __name__=='__main__':
 
-    ans = singleByteXor(unhexlify(s))[0]
+    ans = breakSingleByteXor(unhexlify(s))[0]
     print(ans)
 
 
