@@ -14,7 +14,7 @@ result = "746865206b696420646f6e277420706c6179"
 
 
 def fixedXor(s,t):
-
+    # string -> bytes
     s = unhexlify(s)
     t = unhexlify(t)
     return strxor(s,t)

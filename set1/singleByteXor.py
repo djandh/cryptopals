@@ -34,6 +34,7 @@ freqs = {
     ' ': 0.1918182 
 }
 
+# bytes -> float
 def letterScore(s):
 
     score = 0
@@ -44,6 +45,7 @@ def letterScore(s):
     return score
 
 
+# bytes -> [bytes, int, int]
 def breakSingleByteXor(ciph):
 
     score, key = 0, 0

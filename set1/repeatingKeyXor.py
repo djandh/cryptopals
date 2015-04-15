@@ -14,11 +14,13 @@ I go crazy when I hear a cymbal'''
 key = "ICE"
 
 
+# string, string -> bytes
 def repeatingKeyXor(plain, key):
     plain = str.encode(plain)
     key = str.encode(key)
     return bytes([plain[i] ^ key[i % len(key)] for i in range(len(plain))])
 
+# string, string -> bytes
 def repeatingKeyXor_v2(plain, key):
     result = []
     for i in range(len(plain)):
