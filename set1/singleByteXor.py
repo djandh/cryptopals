@@ -63,6 +63,6 @@ def breakSingleByteXor(ciph):
 if __name__=='__main__':
 
     ans = breakSingleByteXor(unhexlify(s))[0]
-    print(ans)
+    #print(ans)
 
 
