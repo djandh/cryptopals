@@ -1,5 +1,5 @@
 
-from singleByteXor import *
+from challenge3 import *
 from binascii import unhexlify
 
 def detectSingleCharXor(fileName):
